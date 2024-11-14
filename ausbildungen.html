@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #21cf21;
+  background-color: #c7ffce;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ff0000;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #0026ff;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #15ff00;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+<h2>ausbildungen</h2>
+<p>was braucht man für eine ausbildug</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">automatiker</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">informatiker</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">elektroniker</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>automatiker</h3>
+  <p><a href="https://sfb.ch/">https://sfb.ch/</a></p>
+  <p><a href="https://www.berufsberatung.ch/dyn/show/1900?id=3794">https://www.berufsberatung.ch/dyn/show/1900?id=3794</a></p>
+  <img src="test/automatikerbild.jpg" style="width:100%">
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>informatiker</h3>
+  <p><a href="https://www.ausbildung.de/berufe/fachinformatiker/">https://www.ausbildung.de/berufe/fachinformatiker/</a></p>
+  <p><a href="https://www.berufsberatung.ch/dyn/show/1900?id=7671">https://www.berufsberatung.ch/dyn/show/1900?id=7671</a></p>
+  <img src="test/EO6A1566.jpg" style="width:100%">
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>elektroniker</h3>
+  <p><a href="https://www.berufsberatung.ch/dyn/show/1900?id=4039">https://www.berufsberatung.ch/dyn/show/1900?id=4039</a></p>
+  <p><a href="https://www.yousty.ch/de-CH/lehrstellen/berufe/elektrotechnik/23658-elektroniker-in-efz">https://www.yousty.ch/de-CH/lehrstellen/berufe/elektrotechnik/23658-elektroniker-in-efz</a></p>
+  <p><a href=""></a></p>
+  <img src="test/Download.jpg" style="width:70%">
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 
